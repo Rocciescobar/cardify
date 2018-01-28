@@ -40,7 +40,9 @@ El trabajo se desarrolla en una semana y se proponen los siguientes checklists d
 * Preparar demo/presentación.
 * Publicar el ejemplo principal (`index.html`) en GitHub pages.
 
-Se utiliza Trello para el seguimiento de las tareas planificadas. Para ver el tablero, dar click [aquí](https://trello.com/b/cvxdoc2w/prod-final-sprint-04 "titulo").
+Se utiliza Trello para el seguimiento de las tareas planificadas:
+
+![Con titulo](assets/docs/trello.png "titulo")
 
 ## Archivos importantes
 
@@ -52,6 +54,13 @@ El trabajo presenta los siguientes archivos:
 * `package.json` con nombre, versión, descripción, autores, licencia, dependencias, scripts (pretest, test, ...)
 * `.eslintrc` con configuración para linter (ver guía de estilo de JavaScript)
 * `.gitignore` para ignorar node_modules u otras carpetas que no deban incluirse en control de versiones (git).
+
+## Especificaciones
+
+* Se utilizó el framework Bootstrap en su versión 4.0.
+* Se utilizó la librería jQuery en su versión 3.3.1.
+* Se utilizó el estándar más recientemente aceptado de JavaScript ES2015 || ES6.
+* Se utilizó el transpilador/compilador Babel para que convierta nuestro código en ES5 de forma automática.
 
 ***
 
