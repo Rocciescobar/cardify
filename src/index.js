@@ -1,5 +1,5 @@
 // función autoejecutable que agrega figure :
-(() => {
+(($) => {
   const containers = $('.container').find('img');
   containers.wrap('<figure></figure>');
 
@@ -7,4 +7,4 @@
   $(containers).each(function() {
     $(this).after('<figcaption>' + $(this).attr('alt') + '</figcaption>');
   });
-})();
+})(jQuery);
