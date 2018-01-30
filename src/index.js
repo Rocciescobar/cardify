@@ -30,6 +30,14 @@
         });
         // Fin de hover
       })();
-    }
+    },
+    responsive: () => {
+      $('img').each(() => {
+        $(this).css({
+          'max-width': '100%',
+          'height': 'auto'
+        });
+      });
+    },
   });
 })(jQuery);
