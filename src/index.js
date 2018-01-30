@@ -14,6 +14,14 @@
           $(event.target).next().css({display: 'none'});
         });
       })();
-    }
+    },
+    responsive: () => {
+      $('img').each(() => {
+        $(this).css({
+          'max-width': '100%',
+          'height': 'auto'
+        });
+      });
+    },
   });
 })(jQuery);
