@@ -1,21 +1,19 @@
-// función autoejecutable que agrega figure :
-
 (($) => {
   $.fn.extend({
     cardify: () =>{
-      $('img').wrap('<figure></figure>');
-
+      (() => {
+        // Agrega etiquetas figure y figcapture:
+        $('img').wrap('<figure></figure>');
+        $('img').after('<figcaption></figcaption>');
+      
+        // Agrega hover a las imágenes
+        $('img').hover(() => {
+          let alt = event.target.alt;
+          $(event.target).next().text(alt).css({display: 'block'});
+        }, () => {
+          $(event.target).next().css({display: 'none'});
+        });
+      })();
     }
   });
 })(jQuery);
-
-
-/* (($) => {
-  const containers = $('.container').find('img');
-  containers.wrap('<figure></figure>');
-
-  // Agrega etiqueta figcation con alt de imagen
-  $(containers).each(function() {
-    $(this).after('<figcaption>' + $(this).attr('alt') + '</figcaption>');
-  });
-})(jQuery); */
