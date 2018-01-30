@@ -7,12 +7,28 @@
         $('img').after('<figcaption></figcaption>');
       
         // Agrega hover a las imágenes
-        $('img').hover(() => {
+        $('figure').hover(() => {
           let alt = event.target.alt;
-          $(event.target).next().text(alt).css({display: 'block'});
+          $(event.target).parent().css({
+            alignItems: 'center',
+            display: 'flex',
+            justifyContent: 'center',      
+            position: 'relative',
+          });      
+          $(event.target).css({filter: 'grayscale(100%)'});      
+          $(event.target).next().text(alt).css({
+            color: '#fff',
+            display: 'block',
+            fontWeight: 'bold',
+            maxWidth: '80%',
+            position: 'absolute',
+            textAlign: 'center',    
+          });
         }, () => {
+          $(event.target).css({filter: 'none'});    
           $(event.target).next().css({display: 'none'});
         });
+        // Fin de hover
       })();
     }
   });
