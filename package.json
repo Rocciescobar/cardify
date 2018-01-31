@@ -2,9 +2,8 @@
   "name": "cardify",
   "version": "1.0.0",
   "description": "plugin de jQuery que busca todas las imágenes dentro de un contenedor y las reemplaza por un nuevo elemento <figure> que contiene la imagen (<img>) además de un <figcaption> con el texto del atributo alt de la imagen",
-  "main": "index.js",
   "scripts": {
-    "build": "babel src -d lib"
+    "build": "babel src -d public/js"
   },
   "repository": {
     "type": "git",

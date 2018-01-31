@@ -1,5 +1,6 @@
-$(document).ready(function() {
-    $('.container').cardify();
-    $('div').responsive();
-    
+'use strict';
+
+$(document).ready(function () {
+  $('.container').cardify();
+  $('div').responsive();
 });
