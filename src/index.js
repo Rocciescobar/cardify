@@ -31,13 +31,14 @@
         // Fin de hover
       })();
     },
-    responsive: () => {
-      $('img').each(() => {
-        $(this).css({
+    responsive: function () {
+     
+      $('img').each(function ()  {
+        $(this).target.css({
           'max-width': '100%',
           'height': 'auto'
         });
-      });
+      }); 
     },
   });
 })(jQuery);

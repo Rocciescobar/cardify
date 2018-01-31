@@ -34,13 +34,19 @@
       })();
     },
     responsive: function responsive() {
-
-      $('img').each(function () {
-        $(this).target.css({
+      $('img').map(function (valor) {
+        valor.css({
           'max-width': '100%',
           'height': 'auto'
         });
       });
+      /* $('img').each(() => {
+         console.log(event.target)
+         event.target.css({
+           'max-width': '100%',
+           'height': 'auto'
+         });
+       }); */
     }
   });
 })(jQuery);
