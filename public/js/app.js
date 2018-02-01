@@ -1,6 +1,6 @@
 'use strict';
 
-$(document).ready(function () {
+jQuery(window).on('load', function () {
   $('.container').cardify();
   $('div').responsive();
 });

@@ -1,4 +1,4 @@
-$(document).ready(() => {
+jQuery(window).on('load', () => {
   $('.container').cardify();
-  $('div').responsive();    
+  $('div').responsive();   
 });
