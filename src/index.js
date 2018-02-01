@@ -1,6 +1,6 @@
 (($) => {
   $.fn.extend({
-    cardify: () =>{
+    cardify: function() {
       (() => {
         // Agrega etiquetas figure y figcapture:
         $('img').wrap('<figure></figure>');
