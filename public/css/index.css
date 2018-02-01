@@ -1,0 +1,27 @@
+/* Estilos para función cardify */
+.figureStyle{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.figcaptionStyle {
+  color: #fff;
+  font-weight: bold;
+  max-width: 80%;
+  position: absolute;
+  text-align: center;
+}
+
+.imgFilter {
+  filter: grayscale(100%);
+}
+
+.displayBlock {
+  display: block;
+}
+
+.displayNone {
+  display: none;
+}

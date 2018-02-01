@@ -11,32 +11,19 @@
         // Agrega hover a las imágenes
         $('figure').hover(function () {
           var alt = event.target.alt;
-          $(event.target).parent().css({
-            alignItems: 'center',
-            display: 'flex',
-            justifyContent: 'center',
-            position: 'relative'
-          });
-          $(event.target).css({ filter: 'grayscale(100%)' });
-          $(event.target).next().text(alt).css({
-            color: '#fff',
-            display: 'block',
-            fontWeight: 'bold',
-            maxWidth: '80%',
-            position: 'absolute',
-            textAlign: 'center'
-          });
+          $(event.target).parent().addClass('figureStyle');
+          $(event.target).addClass('imgFilter');
+          $(event.target).next().text(alt).addClass('figcaptionStyle').removeClass('displayNone').toggleClass('displayBlock');
         }, function () {
-          $(event.target).css({ filter: 'none' });
-          $(event.target).next().css({ display: 'none' });
+          $(event.target).removeClass('imgFilter');
+          $(event.target).next().removeClass('displayBlock').toggleClass('displayNone');
         });
-        // Fin de hover
       })();
     },
-    responsive: function responsive() {
 
+    responsive: function responsive() {
       $('img').each(function () {
-        $(this).target.css({
+        $(undefined).target.css({
           'max-width': '100%',
           'height': 'auto'
         });
