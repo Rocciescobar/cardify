@@ -18,14 +18,5 @@
         });
       })();
     },
-
-    responsive: () => {     
-      $('img').each(() => {
-        $(this).target.css({
-          'max-width': '100%',
-          'height': 'auto'
-        });
-      }); 
-    },
   });
 })(jQuery);

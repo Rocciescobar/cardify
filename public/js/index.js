@@ -19,15 +19,6 @@
           $(event.target).next().removeClass('displayBlock').toggleClass('displayNone');
         });
       })();
-    },
-
-    responsive: function responsive() {
-      $('img').each(function () {
-        $(undefined).target.css({
-          'max-width': '100%',
-          'height': 'auto'
-        });
-      });
     }
   });
 })(jQuery);
