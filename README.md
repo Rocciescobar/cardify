@@ -6,54 +6,50 @@
 
 ***
 
-## Objetivo
+## Introducción 
 
-Implementar un plugin de jQuery que dado un _contenedor_ debe buscar todas las
-imágenes que encuentre dentro del _contenedor_ y reemplazarlas por un nuevo
-elemento `<figure>` que contenga la imagen (`<img>`) además de un `<figcaption>`
-con el texto del atributo `alt` de la imagen.
+Este proyecto consiste en implementar un plugin de jQuery que dado un _contenedor_ debe buscar todas las imágenes que encuentre dentro del _contenedor_ y reemplazarlas por un nuevo elemento `<figure>` que contenga la imagen `<img>` y además de un `<figcaption>`
+con el texto del atributo `alt` de la imagen, el cual se visualiza al momento de hacer un `hover` sobre la imagen.
 
 ## Flujo de trabajo
 
-El trabajo se desarrolla en una semana y se proponen los siguientes checklists de progreso para cada etapa:
+El proyecto se desarrolló en una semana y se propusieron los siguientes checklists de progreso para cada etapa:
 
 #### ETAPA 1
 
-* Formar equipo.
-* Elegir reto.
-* Hacer fork de reto modelo o crear nuevo repo si has propuesto un reto no propuesto por Laboratoria.
-* Escribir primera versión del `README.md` con una descripción general de la librería así como ejemplos (snippets) de uso y configuración (si fuera necesario).
-* Crear issues y milestones que sirvan como hoja de ruta (roadmap)
+* Escribir primera versión del `README.md` que contenga una descripción general del proyecto y el desarrollo del plugin.
+* Crear issues y milestones que sirvan como hoja de ruta (roadmap).
 * Inicializar proyecto con `npm init` y `git init`.
 * Crear `index.html` con ejemplo principal de uso.
 
 #### ETAPA 2
 
-* Agregar tests que describan la `API` de tu librería y los casos de uso esperados.
-* Implementar funcionalidad esencial.
-* Hacer code review con compañeras e instructores.
+Implementar funcionalidad esencial (función Cardify):
+
+* Agregar etiqueta `<figure>` a cada elemento `<img>` que se encuentre dentro del contenedor.
+* Agregar etiqueta `<figcaption>` a cada elemento `<img>` que se encuentre dentro del contenedor.
+* Mostrar información del atributo 'alt' al hacer hover sobre cada imagen.
+* Agregar estilos css para cuando se hace hover sobre cada imagen.
 
 #### ETAPA 3
 
-* Completar implementación de librería y ejemplo principal (usando la librería).
-* Hacer code review con compañeras e instructores.
-* Preparar demo/presentación.
+* Completar implementación del plugin con un sistema de grillas.
+* Preparar demo/presentación (incluye ejemplo principal).
 * Publicar el ejemplo principal (`index.html`) en GitHub pages.
 
 Se utiliza Trello para el seguimiento de las tareas planificadas:
 
-![Con titulo](assets/docs/trello.png "titulo")
+![Con titulo](public/assets/docs/trello.png "titulo")
 
 ## Archivos importantes
 
-El trabajo presenta los siguientes archivos:
+El proyecto presenta los siguientes archivos para uso del usuario:
 
 * `README.md` con descripción de la librería, instrucciones de instalación, uso y documentación del API.
-* `index.js`: Librería debe exportar una función u objeto al entorno global (`window`) y hacer uso de features de ES6 donde sea apropiado.
-* `index.html`: Página web de la librería con ejemplo funcionando.
-* `package.json` con nombre, versión, descripción, autores, licencia, dependencias, scripts (pretest, test, ...)
-* `.eslintrc` con configuración para linter (ver guía de estilo de JavaScript)
-* `.gitignore` para ignorar node_modules u otras carpetas que no deban incluirse en control de versiones (git).
+* `index.js`: Plugin que exporta una función u objeto al entorno global (`window`).
+* `index.css`: Archivo css que contiene los estilos de hover y grilla.
+* `index.html`: Página web del plugin (demo) que contiene un ejemplo de uso.
+* `package.json` con nombre, versión, descripción, autores, licencia, dependencias, scripts (pretest, test, ...).
 
 ## Especificaciones
 
@@ -69,8 +65,12 @@ El trabajo presenta los siguientes archivos:
 ### Global (navegador)
 
 ```html
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="path-to-cardify.js"></script>
+<link rel="stylesheet" href="index.css">
+```
+
+```html
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="index.js"></script>
 ```
 
 ## Uso
@@ -78,20 +78,24 @@ El trabajo presenta los siguientes archivos:
 ```js
 // `container` es el selector del contenedor donde se buscarán todas las
 // imágenes a ser procesadas.
-$(container).cardify({});
+$('.container').cardify();
 ```
 
-## Documentación del API
+## Ejemplo de uso
+Al usar la función cardify, su archivo html quedaría de la siguiente manera:
 
-...
+```html
+<figure class="figureStyle">
+    <img alt="Ramon Casas : Pintura 1900  Museo Nacional de Arte de Cataluña" class="imgFilter">
+    <figcaption class="figcaptionStyle displayNone">Ramon Casas : Pintura 1900  Museo Nacional de Arte de Cataluña</figcaption>
+</figure>
+```
 
-## Ejemplos
-
-...
+![Con titulo](public/assets/docs/ejemplo.jpg "titulo")
 
 ***
 
-## Equipo de trabajo
+## Autoras
 
 * Rocci Escobar Nuñez
 * Manuela Flores Vilchez
