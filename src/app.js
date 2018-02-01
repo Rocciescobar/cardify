@@ -1,4 +1,4 @@
-jQuery(window).on('load', () => {
+window.addEventListener('load', () => {
   $('.container').cardify();
   $('div').responsive();   
 });

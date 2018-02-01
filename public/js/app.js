@@ -1,6 +1,6 @@
 'use strict';
 
-jQuery(window).on('load', function () {
+window.addEventListener('load', function () {
   $('.container').cardify();
   $('div').responsive();
 });
