@@ -1,5 +1,5 @@
 'use strict';
 
-window.addEventListener('load', function () {
+window.addEventListener('load', function() {
   $('.container').cardify();
 });
