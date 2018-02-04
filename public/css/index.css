@@ -14,10 +14,6 @@
   text-align: center;
 }
 
-.imgFilter {
-  filter: grayscale(100%);
-}
-
 .displayBlock {
   display: block;
 }
