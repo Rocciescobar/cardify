@@ -1,4 +1,4 @@
 window.addEventListener('load', () => {
-  $('.container').cardify();
- 
+  var config = 'blur(5px)';
+  $('.container').cardify(config); 
 });
