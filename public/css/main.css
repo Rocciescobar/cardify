@@ -86,6 +86,24 @@
     transition: .2 all;
     
   }
+
+  .btn-download-styles{
+    background:#008080 ;
+    color: #fff;
+    padding: 20px;
+    border-style: none;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+  
+  .btn-download-styles:hover{
+    background: #fff;
+    border: 1px solid #008080;
+    color: #008080;
+    transition: .2 all;
+    
+  }
+  
   .img-size{
     width: 100%;
   }
