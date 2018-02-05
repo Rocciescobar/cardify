@@ -11,7 +11,7 @@
 Este proyecto consiste en implementar un plugin de jQuery que dado un _contenedor_ debe buscar todas las imágenes que encuentre dentro del _contenedor_ y reemplazarlas por un nuevo elemento `<figure>` que contenga la imagen `<img>` y además de un `<figcaption>`
 con el texto del atributo `alt` de la imagen, el cual se visualiza al momento de hacer un `hover` sobre la imagen.
 
-## Flujo de trabajo
+## Plan de trabajo
 
 El proyecto se desarrolló en una semana y se propusieron los siguientes checklists de progreso para cada etapa:
 
@@ -34,7 +34,7 @@ Implementar funcionalidad esencial (función Cardify):
 #### ETAPA 3
 
 * Completar implementación del plugin con un sistema de grillas.
-* Preparar demo/presentación (incluye ejemplo principal).
+* Preparar demo/presentación (incluye ejemplos).
 * Publicar el ejemplo principal (`index.html`) en GitHub pages.
 
 Se utiliza Trello para el seguimiento de las tareas planificadas:
@@ -45,18 +45,18 @@ Se utiliza Trello para el seguimiento de las tareas planificadas:
 
 El proyecto presenta los siguientes archivos para uso del usuario:
 
-* `README.md` con descripción de la librería, instrucciones de instalación, uso y documentación del API.
+* `README.md` con descripción de la librería, instrucciones de instalación, uso y ejemplos.
 * `index.js`: Plugin que exporta una función u objeto al entorno global (`window`).
 * `index.css`: Archivo css que contiene los estilos de hover y grilla.
-* `index.html`: Página web del plugin (demo) que contiene un ejemplo de uso.
+* `index.html`: Página web del plugin que contiene demo y archivos de descarga (index.js e index.css).
 * `package.json` con nombre, versión, descripción, autores, licencia, dependencias, scripts (pretest, test, ...).
 
 ## Especificaciones
 
-* Se utilizó el framework Bootstrap en su versión 4.0.
-* Se utilizó la librería jQuery en su versión 3.3.1.
+* Se utilizó la librería jQuery en su versión 3.2.1.
 * Se utilizó el estándar más recientemente aceptado de JavaScript ES2015 || ES6.
 * Se utilizó el transpilador/compilador Babel para que convierta nuestro código en ES5 de forma automática.
+* Se utilizó el propio sistema de grillas que se incluye en la función cardify.
 
 ***
 
@@ -69,25 +69,31 @@ El proyecto presenta los siguientes archivos para uso del usuario:
 ```
 
 ```html
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="index.js"></script>
 ```
 
 ## Uso
+* `container` es el selector del contenedor donde se buscarán todas las imágenes a ser procesadas.
+* En la variable `config` se define el tipo de efecto (filtro/filter) al hacer hover.
 
 ```js
-// `container` es el selector del contenedor donde se buscarán todas las
-// imágenes a ser procesadas.
-$('.container').cardify();
+var config = 'grayscale(50%)';
+$('.container').cardify(config);
 ```
 
-## Ejemplo de uso
-Al usar la función cardify, su archivo html quedaría de la siguiente manera:
+Para ver más opciones de `filtros` dar click [aquí](https://developer.mozilla.org/es/docs/Web/CSS/filter "titulo").
+
+## Demo
+Para ver el demo dar click [aquí](https://manu160296.github.io/cardify/public/index.html "titulo").
+
+## Ejemplo
+Al usar la función cardify, el archivo html quedaría ordenado semánticamente así:
 
 ```html
 <figure class="figureStyle">
-    <img alt="Ramon Casas : Pintura 1900  Museo Nacional de Arte de Cataluña" class="imgFilter">
-    <figcaption class="figcaptionStyle displayNone">Ramon Casas : Pintura 1900  Museo Nacional de Arte de Cataluña</figcaption>
+    <img alt="Change your views" style="filter: grayscale(50%);">
+    <figcaption class="figcaptionStyle displayBlock">Change your views</figcaption>
 </figure>
 ```
 
@@ -97,5 +103,5 @@ Al usar la función cardify, su archivo html quedaría de la siguiente manera:
 
 ## Autoras
 
-* Rocci Escobar Nuñez
-* Manuela Flores Vilchez
+* Rocci Escobar Nuñez [Cuenta GitHub](https://github.com/Rocciescobar "titulo")
+* Manuela Flores Vilchez [Cuenta GitHub ](https://github.com/Manu160296 "titulo")

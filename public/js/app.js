@@ -1,6 +1,6 @@
 'use strict';
 
 window.addEventListener('load', function () {
-  var config = 'blur(5px)';
+  var config = 'contrast(30%)';
   $('.container').cardify(config);
 });
