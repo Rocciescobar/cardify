@@ -15,9 +15,14 @@
   }
   
   .principal-title {
-    font-size: 4em;
+    font-size: 5em;
   }
-  
+
+  .position-left {
+    position: relative;
+    top: 6vh;
+  } 
+
   .icon-styles {
     display: inline-block;
     width: 50px;
@@ -55,8 +60,9 @@
   
   .flex-box-container {
     display: flex;
+    vertical-align: center; 
     justify-content: center;
-    vertical-align: center;
+    height: 100%;
   }
   
   .test{
@@ -84,7 +90,12 @@
     border: 1px solid black;
     color: black;
     transition: .2 all;
+    cursor: pointer;
     
+  }
+
+  .text-decoration-none{
+    text-decoration: none;
   }
 
   .btn-download-styles{
@@ -101,7 +112,19 @@
     border: 1px solid #008080;
     color: #008080;
     transition: .2 all;
+    cursor: pointer;
     
+  }
+
+  .btn-back {
+    color: #fff;
+    font-size: 2em;
+  }
+
+  .btn-back:hover{
+    color: rgb(230, 227, 227);
+    cursor: pointer;
+    transition: .2s;
   }
   
   .img-size{
@@ -110,4 +133,9 @@
 
   .padding-0{
     padding: 0
+  }
+
+  .position-relative{
+    position: relative;
+    left: 40%;
   }
